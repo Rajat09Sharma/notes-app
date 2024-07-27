@@ -35,7 +35,12 @@ export default function HomePage() {
 
     const indexOfLastPost = curentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = searchList.slice(indexOfFirstPost, indexOfLastPost);
+    let currentPosts;
+    if (posts.length > 0) {
+        currentPosts = searchList.slice(indexOfFirstPost, indexOfLastPost);
+    }else{
+        currentPosts=[];
+    }
 
     function handlePaginate(number) {
         setCurrentPage(number);
