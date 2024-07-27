@@ -1,10 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-// const time=new Date().toLocaleString([],{timeStyle:"short",dateStyle:"short"});
-// const initialPostState={posts:[{id:1,title:"First Post",content:"Craete your post by clicking on the new post button.",author:"Default",time:time}]}
-// localStorage.setItem("posts",JSON.stringify([
-//     {id:1,title:"First Post",content:"Craete your post by clicking on the new post button.",author:"Default",time:time},
-//  ]));
 
 const posts = JSON.parse(localStorage.getItem("posts"));
 let postsList;
@@ -13,7 +8,6 @@ if(!posts){
 }else{
     postsList=[...posts];
 }
-// localStorage.removeItem("posts");
 
 const initialPostState = { posts: postsList }
 const postSlice = createSlice({
