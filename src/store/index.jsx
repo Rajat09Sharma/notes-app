@@ -8,7 +8,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 const posts = JSON.parse(localStorage.getItem("posts"));
 let postsList;
-if(posts.length===0){
+if(!posts){
     postsList=[];
 }else{
     postsList=[...posts];
