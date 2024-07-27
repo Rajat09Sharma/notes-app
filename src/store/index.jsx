@@ -7,7 +7,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 //  ]));
 
 const posts = JSON.parse(localStorage.getItem("posts"));
-const initialPostState = { posts: posts }
+const initialPostState = { posts: [...posts] }
 const postSlice = createSlice({
     name: "posts",
     initialState: initialPostState,
