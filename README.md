@@ -39,19 +39,21 @@ To set up this project locally, follow these steps:
    cd notes-app
 
 2. Install the dependencies
-   ```npm install
+   ```
+   npm install
 
 3. Start the development server
-    ```npm run dev
+    ```
+    npm run dev
 
 ## Usage
 
 Once the development server is running, you can access the application at http://localhost:3000. The following functionalities will be available:
 
-Create a new note
-View existing notes
-Edit a note
-Delete a note
+- Create a new note
+- View existing notes
+- Edit a note
+- Delete a note
 
 ## Folder Structure
 notes-app/
